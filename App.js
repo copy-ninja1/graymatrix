@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import HomeScreen from './Screens/HomeScreen'
+import SubcategoryScreen from './Screens/SubcategoryScreen'
 
 // 
 const Stack = createNativeStackNavigator();
@@ -18,6 +19,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="category" component={SubcategoryScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

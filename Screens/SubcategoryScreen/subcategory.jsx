@@ -1,14 +1,12 @@
 import React from "react";
-import { SafeAreaView, FlatList, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView, FlatList, Text } from "react-native";
 import ListItem from "./components/listItem";
 import homeStyles from "./home.style";
 import listItemData from "./listData";
 
 function HomeScreen({ navigation }) {
   const renderItem = ({ item }) => (
-    <TouchableOpacity onPress={() => navigation.navigate("category")}>
-      <ListItem title={item.title} description={item.description} />
-    </TouchableOpacity>
+    <ListItem title={item.title} description={item.description} />
   );
 
   return (
@@ -20,9 +18,7 @@ function HomeScreen({ navigation }) {
           marginTop: 10,
           fontWeight: "500",
         }}
-      >
-        Welcome
-      </Text>
+      ></Text>
       <FlatList
         data={listItemData}
         renderItem={renderItem}
